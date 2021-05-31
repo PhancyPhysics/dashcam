@@ -1,0 +1,100 @@
+# DashCam Notes
+
+We had to execute pip without the $PATH variable to get openCV to work with python3. 
+
+    How to find my pip?
+
+        https://unix.stackexchange.com/questions/287154/how-to-find-my-pip
+
+
+    How to find python installation directory on Ubuntu
+
+        https://askubuntu.com/questions/262063/how-to-find-python-installation-directory-on-ubuntu
+
+
+    Unable to upgrade pip
+
+        https://askubuntu.com/questions/644911/unable-to-upgrade-pip
+    
+    Installing Python Packages
+
+        https://www.raspberrypi.org/documentation/linux/software/python.md
+
+We also had to manually install packages required by openCV since installing through pip does not download dependencies
+
+    ImportError: libjasper.so.1: cannot open shared object file: No such file or directory
+
+        https://github.com/amymcgovern/pyparrot/issues/34
+
+    
+usr/local/bin/pip install
+
+# Accessing the Raspberry Pi Camera with OpenCV and Python
+
+https://www.pyimagesearch.com/2015/03/30/accessing-the-raspberry-pi-camera-with-opencv-and-python/
+
+# StackOverflow post that shows how to use openCV to capture image  on keyboard press
+
+    https://stackoverflow.com/questions/34588464/python-how-to-capture-image-from-webcam-on-click-using-opencv
+
+# Setting Camera Parameters in openCV
+
+    https://stackoverflow.com/questions/11420748/setting-camera-parameters-in-opencv-python
+
+    Doesn't work for all parameters
+
+# The root crontab has been edited to run the DashCam python script to run on reboot. 
+
+    https://www.cyberciti.biz/faq/linux-execute-cron-job-after-system-reboot/
+    https://medium.com/@gavinwiener/how-to-schedule-a-python-script-cron-job-dea6cbf69f4e
+    
+# Youtube video demonstrating How to use bluetooth terminal on phone to communicate with Raspberry Pi
+
+    https://www.youtube.com/watch?v=vO82l0IR5GI
+
+# Corresponding article walking through the process for setting up bluetooth communication between Pi and Phone
+
+    https://circuitdigest.com/microcontroller-projects/controlling-raspberry-pi-gpio-using-android-app-over-bluetooth
+
+# Dealing with pairing issues between phone and Pi
+
+    https://askubuntu.com/questions/758586/how-to-unpair-bluetooth-device-from-the-command-line
+    https://askubuntu.com/questions/1020257/bluez5-cannot-connect-to-a-paired-bluetooth-device-on-ubuntu-17-10
+    https://www.raspberrypi.org/forums/viewtopic.php?p=947185#p947185
+    
+# How to configure bluetooth in Raspberry Pi
+
+    https://www.raspberrypi.org/forums/viewtopic.php?p=947185#p947185
+
+# MultiThreading
+
+    https://realpython.com/intro-to-python-threading/#producer-consumer-using-queue
+
+
+    Communicating via Bluetooth Serial with Python
+
+        https://stackoverflow.com/questions/36696535/communicating-via-bluetooth-serial-with-pythonhttps://stackoverflow.com/questions/36696535/communicating-via-bluetooth-serial-with-python
+    
+    https://stackoverflow.com/questions/6893968/how-to-get-the-return-value-from-a-thread-in-python
+    https://docs.python.org/3/library/threading.html#threading.Thread.is_alive
+
+    Stopping a python thread running an infinite loop
+
+        https://stackoverflow.com/questions/24843193/stopping-a-python-thread-running-an-infinite-loop
+
+# Logging (Not implemented correctly)    
+
+    https://realpython.com/python-logging/
+    https://docs.python.org/3/library/logging.html#logging.basicConfig
+
+# Creating videos from image sequence
+
+    https://stackoverflow.com/questions/24961127/how-to-create-a-video-from-images-with-ffmpeg
+
+
+# Project history before creating github repo:
+
+DashCam3 adds a cameraClass for more efficient use of camera but at the cost of breaking video recording.
+DashCam2 adds Timelapse mode where image capture will be repeated for a set duration. Multithreading was also introduce to allow image capture even while the timelapse mode was enabled. 
+DashCam1 adds bluetooth module that allows a device to connect to Raspberry Pi to capture an image on command.  
+DashCam0 captures an image every 15 seconds on program startup. 
