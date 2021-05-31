@@ -4,16 +4,23 @@
 
 - Capture images or video from a webcam connected to a Raspberry Pi that receives commands from an Android Phone over BlueTooth
 - Can be used to create timelapses or record car trips
-- 
+
 ## Commands
 
   __capture__ : Captures a single image
+  
   __repeat [seconds]__ : Captures an image over a period defined in seconds. Default is 15 seconds.
+  
   __setTime [seconds]__ : Sets the duration for a recurring image capture
+  
   __stop__ : Stops recurring image capture
+  
   __record__ : Starts a video recording
+  
   __end__ : Ends a video recording
+  
   __exit__ : Terminates dashcam
+  
   __help__ : Returns this help message
  
 ## Requirements
